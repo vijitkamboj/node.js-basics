@@ -26,3 +26,10 @@ app.post('/user' , (req,res) => {
 
 app.listen(3000)
 
+// RESTful api:
+// req.query --  ....../?name=vijit&age=18
+// req.header
+//req.body
+//req.params ---   app.get('/:id' , ....)
+    // in the request ...../1234
+    // req.params = {id:1234}
