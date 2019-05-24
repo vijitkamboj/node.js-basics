@@ -6,7 +6,7 @@ const user ={
     name: "Vijit"
 }
 app.get('/user' , (req,res) => {
-    res.send(user)
+    res.send(user)              // automatically recognizes the content-type
 })
 app.get('/' , (req,res) => {
     res.send("<h1> Hello World !!!! ,</h1>")
