@@ -1,6 +1,9 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const app = express()
+
+app.use(bodyParser.json())
 
 const user ={
     name: "Vijit",
@@ -13,11 +16,12 @@ app.get('/' , (req,res) => {
 })
 
 app.get('/user' , (req,res) => {
-    res.send("Getting Profiles")              // automatically recognizes the content-type
+              // automatically recognizes the content-type
 })
 
 app.post('/user' , (req,res) => {
-               
+    console.log(req.body);
+    res.send(user)                 
 })
 
 app.listen(3000)
