@@ -9,7 +9,7 @@ const server = http.createServer((request , response) => {
     console.log("urls",request.url);
     // console.log("method",request.method)
     response.setHeader('Content-Type', 'application/json');
-    response.end(JSON.stringify(ab))
+    response.send(JSON.stringify(ab))
 })
 
 server.listen(3000)
